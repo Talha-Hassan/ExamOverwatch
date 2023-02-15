@@ -53,12 +53,53 @@ https://templatemo.com/tm-557-grad-school
 
   <!-- ***** Main Banner Area Start ***** -->
 
-  <div style="height: 78vh;">
+  <div style="height: 100%;">
     <div style="display: flex;flex-direction: column;width: 100%;align-items: center;">
         <h1><b>List Of Students Who Cheated</b></h1>
         <div style=" display: flex;width: 80%;flex-direction: column;">
             <h2 style="font-family: cursive;;">Select Room Number</h2>
-            <button style="margin-top: 3vh;font-size: 30px; font-family: cursive;border-radius: 20px;background-color: transparent;border:2px solid #f5a425;width: 200px;height: 50px;">HS-01<img style="color: white;width: 35px;height: 35px;margin-left: 2vw;" src="/assets/images/next1.png" /></button>
+            <button name="hs01" onclick="myFunction()" style="margin-top: 3vh;font-size: 30px; font-family: cursive;border-radius: 20px;background-color: transparent;border:2px solid #f5a425;width: 200px;height: 50px;">HS-01<img style="color: white;width: 35px;height: 35px;margin-left: 2vw;" src="/assets/images/next1.png" /></button>
+            <div id="loco">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-inline: 50px;
+                    /* border: 1px solid black; */
+                    border-radius: 10px;
+                    margin-top: 2vh;
+                    justify-content: space-evenly;
+                  "
+                >
+                  <div style="color: black; margin-right: 20rem; padding: 10px">
+                    ,<h1>Talha Hasan</h1>
+                  </div>
+                  <div>
+                    <img src="/assets/images/contact-bg.jpg" style="height: 445px;width: 400px;" />
+                  </div>
+                </div>
+                <!-- copy this block for extra divs -->
+                <div 
+                style="
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding-inline: 50px;
+                    margin-top: 2vh;
+                    /* border: 1px solid black; */
+                    border-radius: 10px;
+                    justify-content: space-evenly;
+                  "
+                >
+                  <div style="color: black; margin-right: 20rem; padding: 10px">
+                    <h1>Talha Hasan</h1>
+                </div>
+                <div>
+                    <img src="/assets/images/contact-bg.jpg" style="height: 445px;width: 400px;" />
+                </div>
+            </div>
+        </div>
             <hr/>
             <button style="margin-top: 3vh;font-size: 30px; font-family: cursive;border-radius: 20px;background-color: transparent;border:2px solid #f5a425;width: 200px;height: 50px;">HS-02<img style="color: white;width: 35px;height: 35px;margin-left: 2vw;" src="/assets/images/next1.png" /></button>
             <hr/>
@@ -117,6 +158,15 @@ https://templatemo.com/tm-557-grad-school
     <script src="assets/js/slick-slider.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
+        function myFunction() {
+            // console.log(e)
+        var x = document.getElementById("loco");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        }
         //according to loftblog tut
         $('.nav li:first').addClass('active');
 

@@ -43,10 +43,10 @@ https://templatemo.com/tm-557-grad-school
       <ul class="main-menu">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/class.html">classes</a></li>
-        <li><a href="#section4">Result</a></li>
-        <li><a href="#section6">About</a></li>
-        <li><a href="#section6">Contact</a></li>
-        <li><a href="#section6">Login</a></li>
+        <li><a href="/result.html">Result</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a id="logout" onclick="logout()" style="color: white"></a></li>
       </ul>
     </nav>
   </header>
@@ -73,7 +73,27 @@ https://templatemo.com/tm-557-grad-school
       </div>
     </div>
   </footer>
+  <script>
+    function test(){
+      if(!localStorage.getItem('logged')){
+        document.getElementById('logout').text = 'LOGIN'
+        window.location.replace('/login.html')
+      }else{
+        document.getElementById('logout').text = 'LOGOUT'
+      }
+    }
+    test()
+    function logout(){
+      if(document.getElementById('logout').text=='LOGOUT'){
+        localStorage.clear('logged')
+        window.location.replace('/login.html')
+      }
+      else{
+        // window.location.replace('/login.html')
+      }
+    }
 
+  </script>
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
