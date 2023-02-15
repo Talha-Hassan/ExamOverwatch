@@ -167,7 +167,7 @@ a.menu-link { display: none; }
 .main-header {
     background-color: rgba(22,34,57,0.95);
     height: 80px;
-    position: fixed;
+    position: relative;
     z-index: 12;
     width: 100%;
     top: 0;
@@ -290,9 +290,8 @@ a.menu-link { display: none; }
 /* Slider */
 
 .main-banner {
-  position: relative;
   max-height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: -7px;
 }
 
